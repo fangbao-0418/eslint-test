@@ -1,22 +1,22 @@
 /*
  * @Date: 2020-04-03 18:13:02
  * @LastEditors: fangbao
- * @LastEditTime: 2020-04-07 15:04:17
- * @FilePath: /eslint-test/demo.js
+ * @LastEditTime: 2020-04-07 20:51:03
+ * @FilePath: /eslint-test/demo.tsx
  */
 
 import React, { useEffect } from 'react'
 
 // a
 /** object */
-var o = {
+const o = {
   a: 2,
   c: 2,
   b: 2
 }
 
 /** array */
-var arr = [1, 2, 3]
+const arr = [1, 2, 3]
 
 /** function */
 function a () {
@@ -33,8 +33,8 @@ function reducer (state, action) {
   if (state) {
     action.type = 'USER INFO'
   }
-  var type = action.type
-  var s1,
+  const type = action.type
+  let s1,
       s2,
       s3
   switch (action.type) {
@@ -49,18 +49,22 @@ reducer({}, { type: 'USER INFO' })
 
 var dataSource = [{ a: 2 }, { a: 3 }]
 
-var Hello2 = (
+var Hello2 = () => (
   <div>
     <div> 222         </div>      {'     '} 22 <div >   </div>
   </div>
 )
 
-var hello = (
+var Hello = (
   <div>
-    <Hello2 a={2} />
+    <Hello2 />
     <div> 222    </div>  {'     '} 22 <div ></div>
   </div>
 )
+
+interface xxrops {
+  a: Array<{a: string}>
+}
 
 function render () {
   return (

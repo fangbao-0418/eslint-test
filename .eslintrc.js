@@ -1,11 +1,17 @@
 /*
  * @Date: 2020-03-16 14:01:18
  * @LastEditors: fangbao
- * @LastEditTime: 2020-04-03 18:23:52
- * @FilePath: /xt-new-mini/Users/fangbao/Documents/xituan/eslint-test/.eslintrc.js
+ * @LastEditTime: 2020-04-07 20:50:35
+ * @FilePath: /eslint-test/.eslintrc.js
  */
 module.exports = {
-  extends: ['eslint:recommended'],
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended',
+    // 'plugin:@typescript-eslint/recommended'
+  ],
+  parser: "@typescript-eslint/parser",
+  plugins: ["@typescript-eslint", "react"],
   globals: {
     APP: true,
     Moon: true
@@ -17,6 +23,7 @@ module.exports = {
     es6: true
   },
   rules: {
+    'curly': 2,
     'no-unused-vars': 0,
     'no-console': 0,
     'space-before-blocks': 2,
@@ -28,12 +35,56 @@ module.exports = {
     'comma-spacing': 2,
     'comma-style': 2,
     'computed-property-spacing': 2,
-    'jsx-quotes': ["error", "prefer-single"]
+    'space-before-function-paren': ["error", {
+      "anonymous": "always",
+      "named": "always",
+      "asyncArrow": "always"
+    }],
+    'function-paren-newline': 2,
+    'jsx-quotes': ["error", "prefer-single"],
+    "semi-spacing": ["error", {"before": false, "after": true}],
+    'semi': ["error", "never"],
+    quotes: ["error", "single"],
+    'operator-linebreak': ["error", "before"],
+    'object-property-newline': ["error", {
+        "allowAllPropertiesOnSameLine": true
+      }
+    ],
+    'no-whitespace-before-property': 2,
+    'object-curly-spacing': ["error", "always"],
+    'no-multiple-empty-lines': ["error", { "max": 1, maxBOF: 0, maxEOF: 0 }],
+    'new-cap': "error",
+    'multiline-comment-style': ["error", "starred-block"],
+    'keyword-spacing': ["error", { "after": true }],
+    "indent": ["error", 2, {
+      SwitchCase: 1,
+      ImportDeclaration: 'first',
+      'VariableDeclarator': 'first',
+      // FunctionDeclaration: {
+      //   parameters: 'first',
+      //   body: 'first'
+      // }
+    }],
+    'key-spacing': 'error',
+    'space-in-parens': 2,
+    'no-multi-spaces': 2,
+    'no-trailing-spaces': 2,
+    'no-duplicate-imports': 2,
+    'react/jsx-indent-props': [2, 'first'],
+    'react/jsx-wrap-multilines': [2],
+    'react/jsx-tag-spacing': 2,
+    /** 闭合标签在同一行 */
+    'react/jsx-closing-tag-location': 2,
+    'react/jsx-child-element-spacing': 2,
+    'react/jsx-space-before-closing': [2, 'always']
   },
   parserOptions: {
     sourceType: 'module',
+    "useJSXTextNode": true,
+    "jsx": true,
     ecmaFeatures: {
-      legacyDecorators: true
+      legacyDecorators: true,
+      "jsx": true
     }
   }
 };
