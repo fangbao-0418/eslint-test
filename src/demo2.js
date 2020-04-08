@@ -1,22 +1,22 @@
 /*
  * @Date: 2020-04-03 18:13:02
  * @LastEditors: fangbao
- * @LastEditTime: 2020-04-07 20:51:03
- * @FilePath: /eslint-test/demo.tsx
+ * @LastEditTime: 2020-04-08 08:42:07
+ * @FilePath: /eslint-test/src/demo2.js
  */
 
 import React, { useEffect } from 'react'
 
 // a
 /** object */
-const o = {
+var o = {
   a: 2,
   c: 2,
   b: 2
 }
 
 /** array */
-const arr = [1, 2, 3]
+var arr = [1, 2, 3]
 
 /** function */
 function a () {
@@ -33,10 +33,8 @@ function reducer (state, action) {
   if (state) {
     action.type = 'USER INFO'
   }
-  const type = action.type
-  let s1,
-      s2,
-      s3
+  var type = action.type
+  var s1, s2, s3
   switch (action.type) {
     case 'USER INFO':
       break
@@ -49,36 +47,33 @@ reducer({}, { type: 'USER INFO' })
 
 var dataSource = [{ a: 2 }, { a: 3 }]
 
-var Hello2 = () => (
+var Hello2 = (
   <div>
-    <div> 222         </div>      {'     '} 22 <div >   </div>
+    <div> 222 </div> {'     '} 22 <div> </div>
   </div>
 )
 
-var Hello = (
+var hello = (
   <div>
-    <Hello2 />
-    <div> 222    </div>  {'     '} 22 <div ></div>
+    <Hello2 a={2} />
+    <div> 222 </div> {'     '} 22 <div></div>
   </div>
 )
-
-interface xxrops {
-  a: Array<{a: string}>
-}
 
 function render () {
   return (
     <html lang='en' >
-      <div
-        style={{ margin: 2 }}
-        className='222' >
-        {
-          dataSource.map((item, index) => {
-            return (
-              <div key={index} aria-labelledby='address_label' className='sb' ></div>
-            )
-          })
-        }
+      <div style={{ margin: 2 }} className='222'>
+        {dataSource.map((item, index) => {
+          return (
+            <div
+              key={index}
+              aria-labelledby='address_label'
+              className='sb'
+            >
+            </div>
+          )
+        })}
       </div>
     </html>
   )

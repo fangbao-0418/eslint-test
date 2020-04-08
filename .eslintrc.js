@@ -1,26 +1,29 @@
 /*
  * @Date: 2020-03-16 14:01:18
  * @LastEditors: fangbao
- * @LastEditTime: 2020-04-07 20:50:35
+ * @LastEditTime: 2020-04-08 08:47:41
  * @FilePath: /eslint-test/.eslintrc.js
  */
 module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
-    // 'plugin:@typescript-eslint/recommended'
   ],
   parser: "@typescript-eslint/parser",
-  plugins: ["@typescript-eslint", "react"],
-  globals: {
-    APP: true,
-    Moon: true
-  },
+  plugins: [
+    "react",
+    "@typescript-eslint/tslint"
+  ],
   env: {
     browser: true,
     commonjs: true,
     node: true,
     es6: true
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   },
   rules: {
     'curly': 2,
@@ -75,16 +78,29 @@ module.exports = {
     'react/jsx-tag-spacing': 2,
     /** 闭合标签在同一行 */
     'react/jsx-closing-tag-location': 2,
-    'react/jsx-child-element-spacing': 2,
-    'react/jsx-space-before-closing': [2, 'always']
+    'react/jsx-child-element-spacing': 2
   },
   parserOptions: {
     sourceType: 'module',
     "useJSXTextNode": true,
-    "jsx": true,
+    project: 'tsconfig.json',
     ecmaFeatures: {
       legacyDecorators: true,
       "jsx": true
     }
-  }
+  },
+  overrides: [
+    {
+        files: ['*.ts?(x)'],
+        rules: {
+          "@typescript-eslint/tslint/config": ["error", {
+            // "lintFile": "", // path to tslint.json of your project
+            "rules": {
+              // tslint rules (will be used if `lintFile` is not specified)
+              "interface-name": [true, "always-prefix"]
+            }
+          }],
+        },
+    },
+  ],
 };

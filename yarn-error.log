@@ -1,30 +1,17 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/Cellar/yarn/1.19.1/libexec/bin/yarn.js add eslint-plugin-typescrip@latest -D
+  /usr/local/bin/node /usr/local/bin/yarn install
 
 PATH: 
-  /Users/fangbao/Documents/soft/flutter/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/fangbao/Documents/soft/flutter/bin
+  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Wireshark.app/Contents/MacOS
 
 Yarn version: 
-  1.19.1
+  1.5.1
 
 Node version: 
-  12.13.0
+  10.16.0
 
 Platform: 
   darwin x64
-
-Trace: 
-  Error: http://192.168.20.8:802/eslint-plugin-typescrip: no such package available
-      at Request.params.callback [as _callback] (/usr/local/Cellar/yarn/1.19.1/libexec/lib/cli.js:66926:18)
-      at Request.self.callback (/usr/local/Cellar/yarn/1.19.1/libexec/lib/cli.js:140564:22)
-      at Request.emit (events.js:210:5)
-      at Request.<anonymous> (/usr/local/Cellar/yarn/1.19.1/libexec/lib/cli.js:141536:10)
-      at Request.emit (events.js:210:5)
-      at IncomingMessage.<anonymous> (/usr/local/Cellar/yarn/1.19.1/libexec/lib/cli.js:141458:12)
-      at Object.onceWrapper (events.js:299:28)
-      at IncomingMessage.emit (events.js:215:7)
-      at endReadableNT (_stream_readable.js:1183:12)
-      at processTicksAndRejections (internal/process/task_queues.js:80:21)
 
 npm manifest: 
   {
@@ -34,11 +21,11 @@ npm manifest:
     "license": "MIT",
     "devDependencies": {
       "@types/react": "^16.9.32",
+      "@typescript-eslint/eslint-plugin": "^2.27.0",
       "@typescript-eslint/parser": "^2.27.0",
       "eslint": "^6.8.0",
       "eslint-plugin-jsx-a11y": "^6.2.3",
       "eslint-plugin-react": "^7.19.0",
-      "eslint-plugin-typescript": "^0.14.0",
       "typescript": "^3.8.3"
     },
     "dependencies": {
@@ -117,6 +104,16 @@ Lockfile:
     dependencies:
       "@types/prop-types" "*"
       csstype "^2.2.0"
+  
+  "@typescript-eslint/eslint-plugin@^2.27.0":
+    version "2.27.0"
+    resolved "http://192.168.20.8:802/@typescript-eslint%2feslint-plugin/-/eslint-plugin-2.27.0.tgz#e479cdc4c9cf46f96b4c287755733311b0d0ba4b"
+    integrity sha1-5HnNxMnPRvlrTCh3VXMzEbDQuks=
+    dependencies:
+      "@typescript-eslint/experimental-utils" "2.27.0"
+      functional-red-black-tree "^1.0.1"
+      regexpp "^3.0.0"
+      tsutils "^3.17.1"
   
   "@typescript-eslint/experimental-utils@2.27.0":
     version "2.27.0"
@@ -460,13 +457,6 @@ Lockfile:
       semver "^6.3.0"
       string.prototype.matchall "^4.0.2"
       xregexp "^4.3.0"
-  
-  eslint-plugin-typescript@^0.14.0:
-    version "0.14.0"
-    resolved "http://192.168.20.8:802/eslint-plugin-typescript/-/eslint-plugin-typescript-0.14.0.tgz#068549c3f4c7f3f85d88d398c29fa96bf500884c"
-    integrity sha1-BoVJw/TH8/hdiNOYwp+pa/UAiEw=
-    dependencies:
-      requireindex "~1.1.0"
   
   eslint-scope@^5.0.0:
     version "5.0.0"
@@ -1082,10 +1072,10 @@ Lockfile:
     resolved "http://192.168.20.8:802/regexpp/-/regexpp-2.0.1.tgz#8d19d31cf632482b589049f8281f93dbcba4d07f"
     integrity sha512-lv0M6+TkDVniA3aD1Eg0DVpfU/booSu7Eev3TDO/mZKHBfVjgCGTV4t4buppESEYDtkArYFOxTJWv6S5C+iaNw==
   
-  requireindex@~1.1.0:
-    version "1.1.0"
-    resolved "http://192.168.20.8:802/requireindex/-/requireindex-1.1.0.tgz#e5404b81557ef75db6e49c5a72004893fe03e162"
-    integrity sha1-5UBLgVV+91225JxacgBIk/4D4WI=
+  regexpp@^3.0.0:
+    version "3.1.0"
+    resolved "http://192.168.20.8:802/regexpp/-/regexpp-3.1.0.tgz#206d0ad0a5648cffbdb8ae46438f3dc51c9f78e2"
+    integrity sha1-IG0K0KVkjP+9uK5GQ489xRyfeOI=
   
   resolve-from@^4.0.0:
     version "4.0.0"
@@ -1382,3 +1372,11 @@ Lockfile:
     integrity sha1-fpLnPZF0qZpZdD9npM6HmgS1rlA=
     dependencies:
       "@babel/runtime-corejs3" "^7.8.3"
+
+Trace: 
+  Error: http://192.168.20.8:802/react/-/react-16.13.1.tgz: ETIMEDOUT
+      at Timeout._onTimeout (/usr/local/lib/node_modules/yarn/lib/cli.js:133094:19)
+      at ontimeout (timers.js:436:11)
+      at tryOnTimeout (timers.js:300:5)
+      at listOnTimeout (timers.js:263:5)
+      at Timer.processTimers (timers.js:223:10)
