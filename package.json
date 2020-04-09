@@ -1,18 +1,27 @@
 {
-  "name": "eslint-test",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "eslint-plugin-xt-react",
+  "version": "1.0.4",
+  "main": "dist/index.js",
   "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "babel ./src -d dist"
+  },
   "devDependencies": {
-    "@types/react": "^16.9.32",
-    "@typescript-eslint/eslint-plugin-tslint": "^2.27.0",
-    "@typescript-eslint/parser": "^2.27.0",
+    "typescript": "^3.8.3",
     "eslint": "^6.8.0",
-    "eslint-plugin-react": "^7.19.0",
-    "tslint": "^6.1.1",
-    "typescript": "^3.8.3"
+    "tslint": "^6.1.1"
   },
   "dependencies": {
-    "react": "^16.13.1"
+    "@typescript-eslint/eslint-plugin-tslint": "^2.27.0",
+    "@typescript-eslint/parser": "^2.27.0",
+    "eslint-plugin-react": "^7.19.0"
+  },
+  "peerDependencies": {
+    "eslint": "*",
+    "tslint": "*",
+    "typescript": "*"
   }
 }

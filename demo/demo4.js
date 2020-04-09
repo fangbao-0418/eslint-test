@@ -1,26 +1,31 @@
 /*
  * @Date: 2020-04-03 18:13:02
  * @LastEditors: fangbao
- * @LastEditTime: 2020-04-08 08:42:07
- * @FilePath: /eslint-test/src/demo2.js
+ * @LastEditTime: 2020-04-09 12:32:00
+ * @FilePath: /xt-crm/Users/fangbao/Documents/xituan/eslint-test/demo/demo4.js
  */
 
 import React, { useEffect } from 'react'
 
 // a
+//     b
+
+/** fdsf      323
+ * 323
+*/
 /** object */
-var o = {
+const o = {
   a: 2,
   c: 2,
   b: 2
 }
 
 /** array */
-var arr = [1, 2, 3]
+const arr = [1, 2, 3]
 
 /** function */
 function a () {
-  var b = 2
+  const b = 2
   if (b === 1) {
     console.log(b)
   } else if (b === 3) {
@@ -33,8 +38,8 @@ function reducer (state, action) {
   if (state) {
     action.type = 'USER INFO'
   }
-  var type = action.type
-  var s1, s2, s3
+  const type = action.type
+  let s1, s2, s3
   switch (action.type) {
     case 'USER INFO':
       break
@@ -45,15 +50,15 @@ function reducer (state, action) {
 
 reducer({}, { type: 'USER INFO' })
 
-var dataSource = [{ a: 2 }, { a: 3 }]
+const dataSource = [{ a: 2 }, { a: 3 }]
 
-var Hello2 = (
+const Hello2 = (
   <div>
     <div> 222 </div> {'     '} 22 <div> </div>
   </div>
 )
 
-var hello = (
+const hello = (
   <div>
     <Hello2 a={2} />
     <div> 222 </div> {'     '} 22 <div></div>
@@ -69,7 +74,7 @@ function render () {
             <div
               key={index}
               aria-labelledby='address_label'
-              className='sb'
+              className='ssv '
             >
             </div>
           )
