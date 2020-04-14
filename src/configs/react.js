@@ -1,8 +1,8 @@
 /*
  * @Date: 2020-04-08 11:43:26
  * @LastEditors: fangbao
- * @LastEditTime: 2020-04-14 14:15:57
- * @FilePath: /eslint-test/src/configs/react.js
+ * @LastEditTime: 2020-04-14 14:30:27
+ * @FilePath: /supplier/Users/fangbao/Documents/xituan/eslint-test/src/configs/react.js
  */
 module.exports = {
   extends: [
@@ -81,7 +81,7 @@ module.exports = {
     'react/jsx-tag-spacing': 2,
     /** 闭合标签在同一行 */
     'react/jsx-closing-tag-location': 2,
-    'react/jsx-child-element-spacing': 2,
+    'react/jsx-child-element-spacing': [0],
     'react/display-name': 0
   },
   parserOptions: {
