@@ -1,8 +1,8 @@
 /*
  * @Date: 2020-04-03 18:13:02
  * @LastEditors: fangbao
- * @LastEditTime: 2020-04-09 10:47:12
- * @FilePath: /xt-crm/Users/fangbao/Documents/xituan/eslint-test/demo/demo.tsx
+ * @LastEditTime: 2020-04-14 14:16:46
+ * @FilePath: /eslint-test/demo/demo.tsx
  */
 
 import React, { useEffect } from 'react'
@@ -19,8 +19,8 @@ const o = {
 const arr = [1, 2, 3]
 
 /** function */
-function a () {
-  const b = 2
+function a (b: number, c?: number) {
+  // const b = 2
   if (b === 1) {
     console.log(b)
   } else if (b === 3) {
@@ -28,6 +28,11 @@ function a () {
   }
   return 2
 }
+
+a(
+  2,
+  2
+)
 
 function reducer (state: any, action: any) {
   if (state) {

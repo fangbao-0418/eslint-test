@@ -1,8 +1,8 @@
 /*
  * @Date: 2020-04-08 11:43:26
  * @LastEditors: fangbao
- * @LastEditTime: 2020-04-09 12:31:22
- * @FilePath: /xt-crm/Users/fangbao/Documents/xituan/eslint-test/src/configs/react.js
+ * @LastEditTime: 2020-04-14 14:15:57
+ * @FilePath: /eslint-test/src/configs/react.js
  */
 module.exports = {
   extends: ['eslint:recommended', 'plugin:react/recommended'],
@@ -37,7 +37,7 @@ module.exports = {
       'named': 'always',
       'asyncArrow': 'always'
     }],
-    'function-paren-newline': 2,
+    'function-paren-newline': [2, 'multiline-arguments'],
     'jsx-quotes': ['error', 'prefer-single'],
     'semi-spacing': ['error', {
       'before': false,
@@ -88,7 +88,8 @@ module.exports = {
 
     /** 闭合标签在同一行 */
     'react/jsx-closing-tag-location': 2,
-    'react/jsx-child-element-spacing': 2
+    'react/jsx-child-element-spacing': 2,
+    'react/display-name': 0
   },
   parserOptions: {
     sourceType: 'module',
