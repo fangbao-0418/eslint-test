@@ -1,8 +1,8 @@
 /*
  * @Date: 2020-04-08 11:43:26
  * @LastEditors: fangbao
- * @LastEditTime: 2020-04-14 14:30:27
- * @FilePath: /supplier/Users/fangbao/Documents/xituan/eslint-test/src/configs/react.js
+ * @LastEditTime: 2020-04-16 13:46:17
+ * @FilePath: /xt-crm/Users/fangbao/Documents/xituan/eslint-test/src/configs/react.js
  */
 module.exports = {
   extends: ['eslint:recommended', 'plugin:react/recommended'],
@@ -37,7 +37,7 @@ module.exports = {
       'named': 'always',
       'asyncArrow': 'always'
     }],
-    'function-paren-newline': [2, 'multiline-arguments'],
+    'function-paren-newline': ['error', 'consistent'],
     'jsx-quotes': ['error', 'prefer-single'],
     'semi-spacing': ['error', {
       'before': false,
